@@ -422,16 +422,6 @@ endfunction
 function! <SID>DoxygenAuthorFunc()
   call s:InitializeParameters()
 
-  " Test authorName variable
-  if !exists("g:DoxygenToolkit_authorName")
-    let g:DoxygenToolkit_authorName = input("Enter name of the author (generally yours...) : ")
-  endif
-
-  " Test versionString variable
-  if !exists("g:DoxygenToolkit_versionString")
-    let g:DoxygenToolkit_versionString = input("Enter version string : ")
-  endif
-
   " Get file name
   let l:fileName = expand('%:t')
 
@@ -441,9 +431,7 @@ function! <SID>DoxygenAuthorFunc()
   exec "normal o".s:interCommentTag.g:DoxygenToolkit_briefTag_pre
   mark d
   exec "normal o".s:interCommentTag.g:DoxygenToolkit_authorTag.g:DoxygenToolkit_authorName
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_versionTag.g:DoxygenToolkit_versionString
-  let l:date = strftime("%Y-%m-%d")
-  exec "normal o".s:interCommentTag.g:DoxygenToolkit_dateTag.l:date
+  exec "normal o"."lazysmartegg@gmail.com"
   if ( g:DoxygenToolkit_endCommentTag != "" )
     exec "normal o".s:endCommentTag
   endif
