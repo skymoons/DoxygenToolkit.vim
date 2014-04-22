@@ -431,7 +431,7 @@ function! <SID>DoxygenAuthorFunc()
   exec "normal o".s:interCommentTag.g:DoxygenToolkit_briefTag_pre
   mark d
   exec "normal o".s:interCommentTag.g:DoxygenToolkit_authorTag.g:DoxygenToolkit_authorName
-  exec "normal o"."lazysmartegg@gmail.com"
+  exec "normal o"."* @lazysmartegg@gmail.com"
   if ( g:DoxygenToolkit_endCommentTag != "" )
     exec "normal o".s:endCommentTag
   endif
